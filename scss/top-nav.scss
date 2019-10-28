@@ -1,0 +1,88 @@
+@import 'common';
+
+// Container
+
+.page-container {
+    position: relative;
+}
+
+// Header
+
+header, footer {
+    background: #212121; 
+    box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    color: #fff;
+
+    #nav-mobile-top {
+        background: rgba(0, 0, 0, 1);
+    }
+
+}
+
+// Main
+
+main {
+
+    section {
+        padding: 4rem 5vw;
+        text-align: center;
+        min-height: 100vh;
+
+        &:nth-child(2n+3) {
+        background: #eee;
+        }
+    }
+
+}
+
+#hero {
+    background-image:   linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
+                        url('../images/hero-lg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: initial;
+    height: 400px;
+
+    .text-container {
+        margin-top: 50px;
+    }
+
+}
+
+// Benefits Section
+
+// #benefits {
+
+// }
+
+// Footer
+
+// footer {
+
+// }
+
+/////////////////////////
+//    Media Queries    //
+/////////////////////////
+
+@media (min-width: 768px) {
+
+    header {
+
+        #nav-mobile-top {
+            background: transparent;
+        }
+
+    }
+
+    #hero {
+        background-size: cover;
+    }
+
+}
+
+
+

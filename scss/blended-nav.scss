@@ -1,0 +1,76 @@
+@import 'common';
+
+
+// Header
+
+header, footer {
+    background: transparent;
+    margin-bottom: -100px;
+    position: relative;
+}
+
+header {
+  z-index: 1;
+
+  #nav-mobile-top {
+    background: rgba(1, 87, 155, 1);
+  }
+
+}
+
+// Main
+
+main {
+    position: relative;
+}
+
+#hero {
+    background-image:   linear-gradient(to right, rgba(1, 87, 155, 0.5), rgba(1, 87, 155, 0.5)),
+                        url('../images/hero-xl.jpg');
+    background-position: 35% 50%;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+
+    .text-container {
+        margin-top: 150px;
+    }
+  
+}
+
+// Benefits Section
+
+// #benefits {
+    
+// }
+
+// Footer
+
+footer {
+    background: rgba(1, 87, 155, 1);
+    box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/////////////////////////
+//    Media Queries    //
+/////////////////////////
+
+@media (min-width: 768px) {
+
+    header {
+
+        #nav-mobile-top {
+            background: transparent;
+        }
+
+    }
+
+    // #hero {
+  
+    // }
+
+
+}
+
+
+
