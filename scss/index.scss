@@ -191,52 +191,66 @@ main {
 
 #hero {
     background-image: url('../images/hero-lg.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 400px;
 
-    h2, p {
-        color: #fff;
-        text-shadow: 1px 1px 4px #212121;
-    }
-
-    h2 {
-        font-weight: 100;
+    .text-container {
         margin-top: 50px;
-    }
 
-    p {
-        margin: 1rem 0;
+        h2, p {
+            color: #fff;
+            text-shadow: 1px 1px 4px #212121;
+        }
+    
+        h2 {
+            font-size: 3rem;
+        }
+    
+        p {
+            margin: 1rem 0;
+        }
+
     }
 
 }
 
 #benefits {
+    color: #5588d3;
 
-    i[class~="fa"] {
-        color: #212121;
-    }
 
     h2 {
+        font-size: 2.5rem;
+        font-weight: 100;
         margin: 0 0 2rem;
     }
 
     ul {
 
         li {
-        margin: 1rem 0 3rem;
-        
-        i {
-            font-size: 3.5rem;
-        }
+            margin: 1rem 0 3rem;
+            
+            i {
+                filter: brightness(80%);
+                font-size: 3.5rem;
+                margin: 1.5rem 0 2.5rem;
+            }
+    
+            h3 {
+                margin: 1rem 0;
+            }
 
-        i, h3, p {
-            margin: 1rem 0;
-        }
+            h3 > a {
+                color: #5588d3;
+            }
 
+            p {
+                margin: 0 0 2.5rem;
+            }
+    
         }
 
     }
