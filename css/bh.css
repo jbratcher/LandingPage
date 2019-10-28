@@ -68,17 +68,6 @@ header {
     header #menu-toggle:hover {
       opacity: 0.5;
       transition: all 0.5s ease-in-out; }
-  header #nav-mobile-top {
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: -30rem;
-    left: 0;
-    transition: all 0.5s ease-in-out;
-    width: 100vw; }
-    header #nav-mobile-top:target {
-      transform: translateY(30rem); }
   header ul {
     display: flex;
     flex-direction: column;
@@ -121,20 +110,22 @@ main {
 
 #hero {
   background-image: linear-gradient(to right, rgba(1, 87, 155, 0.5), rgba(1, 87, 155, 0.5)), url("../images/hero-xl.jpg");
-  background-position: 50% 50%;
+  background-position: 45% 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 600px;
   position: relative;
   top: -100px; }
-  #hero h2, #hero p {
-    color: #fff;
-    text-shadow: 1px 1px 4px #212121; }
-  #hero h2 {
-    font-weight: 100; }
-  #hero p {
-    margin: 1rem 0; }
+  #hero .text-container {
+    margin-top: 150px; }
+    #hero .text-container h2, #hero .text-container p {
+      color: #fff;
+      text-shadow: 1px 1px 4px #212121; }
+    #hero .text-container h2 {
+      font-size: 3rem; }
+    #hero .text-container p {
+      margin: 1rem 0; }
 
 #benefits i[class~="fa"] {
   color: #212121; }
@@ -150,6 +141,7 @@ main {
     margin: 1rem 0; }
 
 footer {
+  background: #01579b;
   box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5);
   justify-content: space-around; }
 

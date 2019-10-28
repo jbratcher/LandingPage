@@ -1,31 +1,31 @@
 // Main Sass File
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
-  background: #fff;
-  color: #212121;
-  font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
+    background: #fff;
+    color: #212121;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 // Classes
 
 .btn {
-  border-radius: 0.4rem;
-  color: #fff;
-  margin: 1rem;
-  text-align: center;
-  width: 25vw;
+    border-radius: 0.4rem;
+    color: #fff;
+    margin: 1rem;
+    text-align: center;
+    width: 25vw;
 }
 
 .btn-cta {
@@ -37,32 +37,32 @@ ul {
 }
 
 .btn-transparent {
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
 }
 
 .btn-ghost {
-  border: 0.125rem solid #fff;
-  padding: 14px;
+    border: 0.125rem solid #fff;
+    padding: 14px;
 }
 
 // Container
 
 .page-container {
-  position: relative;
+    position: relative;
 }
 
 // Header
 
 header, footer {
-  background: transparent;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  position: relative;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
 }
 
 header {
@@ -86,115 +86,99 @@ header {
       
     }
 
-  i {
-    font-size: 1.5rem;
-  }
-
-  #menu-toggle {
-    color: #fff;
-    position: absolute;
-    top: 4vh;
-    right: 5vw;
-
-    &:hover {
-        opacity: 0.5;
-        transition: all 0.5s ease-in-out;
+    i {
+        font-size: 1.5rem;
     }
 
-  }
-
-  #nav-mobile-top {
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: -30rem;
-    left: 0;
-    transition: all 0.5s ease-in-out;
-    width: 100vw;
-
-    &:target {
-      transform: translateY(30rem);
-    }
-
-  }
-  
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    li {
-      position: relative;
-
-      &:first-of-type {
-        top: 3vh;
-        right: -40vw;
-      }
-
-      a {
-        display: block;
+    #menu-toggle {
         color: #fff;
-        font-size: 1rem;
-        margin: 0.75rem 0;
-        padding: 1rem;
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        white-space: nowrap;
-      }
-
-      a#nav-close {
-        margin: 0;
-        padding: 0;
         position: absolute;
-      }
+        top: 4vh;
+        right: 5vw;
 
-      a:hover{
-        color: #ddd;
-      }
+        &:hover {
+            opacity: 0.5;
+            transition: all 0.5s ease-in-out;
+        }
+
+    }
+  
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            position: relative;
+
+            &:first-of-type {
+                top: 3vh;
+                right: -40vw;
+            }
+
+            a {
+                display: block;
+                color: #fff;
+                font-size: 1rem;
+                margin: 0.75rem 0;
+                padding: 1rem;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                white-space: nowrap;
+            }
+
+            a#nav-close {
+                margin: 0;
+                padding: 0;
+                position: absolute;
+            }
+
+            a:hover{
+                color: #ddd;
+            }
+
+        }
+
+        .btn:hover {
+            border-color: #ddd;
+        }
 
     }
 
-    .btn:hover {
-      border-color: #ddd;
+    #nav-close {
+
+        &:hover {
+            text-decoration: none;
+            opacity: 0.5;
+        }
+
     }
-
-  }
-
-  #nav-close {
-
-      &:hover {
-          text-decoration: none;
-          opacity: 0.5;
-      }
-
-  }
 
 }
 
 // Main
 
-
 main {
-  position: relative;
+    position: relative;
 
-  section {
-    padding: 4rem 5vw;
-    text-align: center;
-    min-height: 300px;
+    section {
+        padding: 4rem 5vw;
+        text-align: center;
+        min-height: 300px;
 
-    &:nth-child(2n+3) {
-      background: #eee;
+        &:nth-child(2n+3) {
+            background: #eee;
+        }
+
     }
-  }
 
 }
 
 #hero {
     background-image:   linear-gradient(to right, rgba(1, 87, 155, 0.5), rgba(1, 87, 155, 0.5)),
                         url('../images/hero-xl.jpg');
-    background-position: 50% 50%;
+    background-position: 45% 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,45 +186,51 @@ main {
     position: relative;
     top: -100px;
 
-  h2, p {
-    color: #fff;
-    text-shadow: 1px 1px 4px #212121;
-  }
+    .text-container {
+        margin-top: 150px;
 
-  h2 {
-    font-weight: 100;
-  }
+        h2, p {
+            color: #fff;
+            text-shadow: 1px 1px 4px #212121;
+        }
+    
+        h2 {
+            font-size: 3rem;
+        }
+    
+        p {
+            margin: 1rem 0;
+        }
 
-  p {
-    margin: 1rem 0;
-  }
+    }
 
+  
 }
 
 #benefits {
 
     i[class~="fa"] {
-      color: #212121;
+        color: #212121;
     }
   
     h2 {
-      margin: 0 0 2rem;
+        margin: 0 0 2rem;
     }
   
     ul {
   
-      li {
-        margin: 1rem 0 3rem;
-        
-        i {
-          font-size: 3.5rem;
+        li {
+            margin: 1rem 0 3rem;
+            
+            i {
+                font-size: 3.5rem;
+            }
+    
+            i, h3, p {
+                margin: 1rem 0;
+            }
+    
         }
-  
-        i, h3, p {
-          margin: 1rem 0;
-        }
-  
-      }
   
     }
   
@@ -249,8 +239,9 @@ main {
 // Footer
 
 footer {
-  box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5);
-  justify-content: space-around;
+    background: rgba(1, 87, 155, 1);
+    box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5);
+    justify-content: space-around;
 }
 
 /////////////////////////
@@ -260,83 +251,83 @@ footer {
 @media (min-width: 768px) {
 
   header {
-    flex-direction: row;
-    justify-content: space-around;
-
-    .nav-brand {
-
-        h1 {
-            font-size: 1.75rem;
-        }
-
-    }
-
-    #nav-mobile-top {
-      background: none;
-      color: #fff;
-      top: 0;
-      position: relative;
-
-      ul {
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: space-around;
 
-        li {
-          font-size: 1.25rem;
-          margin: 0 1rem;
-        }
+        .nav-brand {
 
-        a {
-          padding: 0.5rem 1rem;
+            h1 {
+                font-size: 1.75rem;
+            }
 
         }
 
-        a.btn {
-          margin: 0;
-          width: auto;
+        #nav-mobile-top {
+            background: none;
+            color: #fff;
+            top: 0;
+            position: relative;
+
+            ul {
+                flex-direction: row;
+                justify-content: flex-end;
+
+                li {
+                    font-size: 1.25rem;
+                    margin: 0 1rem;
+                }
+
+                a {
+                    padding: 0.5rem 1rem;
+
+                }
+
+                a.btn {
+                    margin: 0;
+                    width: auto;
+                }
+
+            }
+
         }
 
-      }
+        #menu-toggle, .toggle {
+            display: none;
+        }
 
     }
 
-    #menu-toggle, .toggle {
-      display: none;
-    }
-
-  }
-
-  #hero {
-    height: 600px;
+    #hero {
+        height: 600px;
   
-    .text-container {
-      margin-top: 200px;
-  
-      h2 {
-          font-size: 3rem;
-      }
-  
-      p {
-      font-size: 1.5rem;
-      }
-  
-    }
-  
-  }
-
-  #benefits {
-  
-    ul {
-      display: flex;
-      justify-content: space-around;
-
-      li {
-        flex: 1;
-      }
-
-    }
+        .text-container {
+            margin-top: 200px;
     
-  }
+            h2 {
+                font-size: 3rem;
+            }
+        
+            p {
+                font-size: 1.5rem;
+            }
+  
+        }
+  
+    }
+
+    #benefits {
+    
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                flex: 1;
+            }
+
+        }
+        
+    }
 
 }
 
