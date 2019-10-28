@@ -11,6 +11,7 @@ html, body {
     color: #212121;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     width: 100vw;
 }
 
@@ -194,7 +195,7 @@ header {
 
 main {
 
-    section {
+    &>section {
         padding: 4rem 5vw;
         text-align: center;
         min-height: 500px;
@@ -277,6 +278,46 @@ main {
 
 }
 
+// Flagship section
+
+#flagship {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+    position: relative;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+
+        h2 {
+            color: #5588d3;
+            font-size: 2.5rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+        }
+    
+        p {
+            margin-bottom: 2rem;
+        }
+
+    }
+    
+    .image {
+        margin-top: auto;
+
+        img {
+            width: 80vw;
+            height: auto;
+        }
+
+    }
+
+}
+
 // Footer
 
 footer {
@@ -353,6 +394,34 @@ footer {
 
         }
         
+    }
+
+}
+
+// Flagship Section (Tablet and larger)
+
+#flagship {
+    flex-direction: row;
+    
+
+    .content {
+        align-items: start;
+        margin-bottom: 0;
+        padding: 0 4rem;
+        text-align: left;
+
+        button {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .image {
+
+        img {
+            width: 45vw;
+        }
+
     }
 
 }
