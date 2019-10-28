@@ -8,7 +8,7 @@
 
 html, body {
   background: #fff;
-  color: #000;
+  color: #212121;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
@@ -28,6 +28,14 @@ ul {
   width: 25vw;
 }
 
+.btn-cta {
+    background-color: #00c853;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    width: auto;
+}
+
 .btn-transparent {
   background: rgba(255, 255, 255, 0.3);
   border: none;
@@ -40,7 +48,7 @@ ul {
 
 // Container
 
-section.container {
+.page-container {
   position: relative;
 }
 
@@ -60,21 +68,33 @@ header, footer {
 header {
   z-index: 1;
 
-  h1 {
-    font-weight: 100;
-    
-    &:hover {
-      opacity: 0.5;
-      transition: all 0.5s ease-in-out;
+    .nav-brand {
+        display: flex;
+
+        &:hover {
+            opacity: 0.5;
+            transition: all 0.5s ease-in-out;
+        }
+
+        i {
+            margin: 0.25rem 0.5rem 0;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+      
     }
 
+  i {
+    font-size: 1.5rem;
   }
 
   #menu-toggle {
     color: #fff;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 4vh;
+    right: 5vw;
 
     &:hover {
         opacity: 0.5;
@@ -84,7 +104,7 @@ header {
   }
 
   #nav-mobile-top {
-    background: #616161;
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -107,6 +127,11 @@ header {
     li {
       position: relative;
 
+      &:first-of-type {
+        top: 3vh;
+        right: -40vw;
+      }
+
       a {
         display: block;
         color: #fff;
@@ -123,8 +148,6 @@ header {
         margin: 0;
         padding: 0;
         position: absolute;
-        top: 3vw;
-        right: -38vw;
       }
 
       a:hover{
@@ -140,9 +163,6 @@ header {
   }
 
   #nav-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
 
       &:hover {
           text-decoration: none;
@@ -171,18 +191,20 @@ main {
 
 }
 
-.hero {
-  background-image: url('../images/hero.jpg');
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 300px;
-  position: relative;
-  top: -60px;
+#hero {
+    background-image:   linear-gradient(to right, rgba(1, 87, 155, 0.5), rgba(1, 87, 155, 0.5)),
+                        url('../images/hero-xl.jpg');
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    position: relative;
+    top: -100px;
 
   h2, p {
     color: #fff;
-    text-shadow: 1px 1px 4px #000;
+    text-shadow: 1px 1px 4px #212121;
   }
 
   h2 {
@@ -194,6 +216,35 @@ main {
   }
 
 }
+
+#benefits {
+
+    i[class~="fa"] {
+      color: #212121;
+    }
+  
+    h2 {
+      margin: 0 0 2rem;
+    }
+  
+    ul {
+  
+      li {
+        margin: 1rem 0 3rem;
+        
+        i {
+          font-size: 3.5rem;
+        }
+  
+        i, h3, p {
+          margin: 1rem 0;
+        }
+  
+      }
+  
+    }
+  
+  }
 
 // Footer
 
@@ -212,8 +263,15 @@ footer {
     flex-direction: row;
     justify-content: space-around;
 
-    #nav-mobile-top {
+    .nav-brand {
 
+        h1 {
+            font-size: 1.75rem;
+        }
+
+    }
+
+    #nav-mobile-top {
       background: none;
       color: #fff;
       top: 0;
@@ -248,76 +306,39 @@ footer {
 
   }
 
+  #hero {
+    height: 600px;
+  
+    .text-container {
+      margin-top: 200px;
+  
+      h2 {
+          font-size: 3rem;
+      }
+  
+      p {
+      font-size: 1.5rem;
+      }
+  
+    }
+  
+  }
+
+  #benefits {
+  
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        flex: 1;
+      }
+
+    }
+    
+  }
+
 }
 
-.hero {
-  height: 400px;
 
-  h2 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 1.5rem;
-  }
-
-}
-
-// Right option
-
-#nav-mobile-right {
-  background: #eee;
-  background: radial-gradient(circle at top right, #fefefe, #efefef, #eee);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  right: -100vw;
-  transition: all 0.5s ease-in-out;
-  width: 100vw;
-
-  &:target {
-    transform: translateX(-100vw);
-  }
-}  
-
-// Left Option
-
-#nav-mobile-left {
-  background: #eee;
-  background: radial-gradient(circle at top right, #fefefe, #efefef, #eee);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  transition: all 0.5s ease-in-out;
-  width: 100vw;
-
-  &:target {
-    transform: translateX(100vw);
-  }
-}  
-
-// Bottom Option
-
-#nav-mobile-bottom {
-  background: #eee;
-  background: radial-gradient(circle at top right, #fefefe, #efefef, #eee);
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  position: fixed;
-  top: 100vw;
-  left: 0;
-  transition: all 0.5s ease-in-out; 
-  width: 100vw;
-  z-index: -99;
-
-  &:target {
-    opacity: 1;
-    transform: translateY(-100vw);
-    z-index: 1;
-  }
-}  
 
