@@ -11,8 +11,8 @@ html, body {
     color: #212121;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    width: 100vw;
 }
-
 
 ul {
     list-style-type: none;
@@ -23,9 +23,15 @@ ul {
 .btn {
     border-radius: 0.4rem;
     color: #fff;
+    cursor: pointer;
     margin: 1rem;
     text-align: center;
     width: 25vw;
+
+    &:hover {
+        filter: brightness(110%);
+    }
+
 }
 
 .btn-cta {
@@ -61,6 +67,7 @@ header, footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: -100px;
     padding: 1rem;
     position: relative;
 }
@@ -99,6 +106,22 @@ header {
         &:hover {
             opacity: 0.5;
             transition: all 0.5s ease-in-out;
+        }
+
+    }
+
+    #nav-mobile-top {
+        background: rgba(1, 87, 155, 0.9);
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: -30rem;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+        width: 100vw;
+
+        &:target {
+            transform: translateY(30rem);
         }
 
     }
@@ -165,7 +188,7 @@ main {
     section {
         padding: 4rem 5vw;
         text-align: center;
-        min-height: 300px;
+        min-height: 500px;
 
         &:nth-child(2n+3) {
             background: #eee;
@@ -178,13 +201,13 @@ main {
 #hero {
     background-image:   linear-gradient(to right, rgba(1, 87, 155, 0.5), rgba(1, 87, 155, 0.5)),
                         url('../images/hero-xl.jpg');
-    background-position: 45% 50%;
+    background-position: 35% 50%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 600px;
     position: relative;
-    top: -100px;
 
     .text-container {
         margin-top: 150px;
@@ -208,12 +231,11 @@ main {
 }
 
 #benefits {
-
-    i[class~="fa"] {
-        color: #212121;
-    }
+    color: #5588d3;
   
     h2 {
+        font-size: 2.5rem;
+        font-weight: 100;
         margin: 0 0 2rem;
     }
   
@@ -223,11 +245,21 @@ main {
             margin: 1rem 0 3rem;
             
             i {
+                filter: brightness(80%);
                 font-size: 3.5rem;
+                margin: 1.5rem 0 2.5rem;
             }
     
-            i, h3, p {
+            h3 {
                 margin: 1rem 0;
+            }
+
+            h3 > a {
+                color: #5588d3;
+            }
+
+            p {
+                margin: 0 0 2.5rem;
             }
     
         }
@@ -252,7 +284,6 @@ footer {
 
   header {
         flex-direction: row;
-        justify-content: space-around;
 
         .nav-brand {
 
