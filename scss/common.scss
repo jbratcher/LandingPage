@@ -250,7 +250,7 @@ main {
             
             i {
                 filter: brightness(80%);
-                font-size: 7rem;
+                font-size: 4rem;
                 margin: 1.5rem 0 2.5rem;
             }
     
@@ -381,6 +381,8 @@ footer {
         }
   
     }
+
+    // Benefits Section
   
     #benefits {
     
@@ -388,40 +390,46 @@ footer {
             display: flex;
             justify-content: space-around;
 
-        li {
-            flex: 1;
-        }
+            li {
+                flex: 1;
+
+                i {
+                    font-size: 6rem;
+                }
+
+            }
 
         }
         
     }
 
-}
+    // Flagship Section (Tablet and larger)
 
-// Flagship Section (Tablet and larger)
+    #flagship {
+        flex-direction: column;
+        
+        .content {
+            align-items: start;
+            margin-bottom: 0;
+            padding: 0 4rem;
+            text-align: left;
 
-#flagship {
-    flex-direction: row;
-    
+            button {
+                margin-left: 0;
+                margin-right: 0;
+            }
 
-    .content {
-        align-items: start;
-        margin-bottom: 0;
-        padding: 0 4rem;
-        text-align: left;
-
-        button {
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
-
-    .image {
-
-        img {
-            width: 45vw;
         }
 
+        .image {
+
+            img {
+                width: 45vw;
+            }
+
+        }
+
     }
 
 }
+

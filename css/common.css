@@ -155,7 +155,7 @@ main > section {
     margin: 1rem 0 3rem; }
     #benefits ul li i {
       filter: brightness(80%);
-      font-size: 7rem;
+      font-size: 4rem;
       margin: 1.5rem 0 2.5rem; }
     #benefits ul li h3 {
       font-size: 1.6rem;
@@ -226,17 +226,18 @@ footer {
     display: flex;
     justify-content: space-around; }
     #benefits ul li {
-      flex: 1; } }
-
-#flagship {
-  flex-direction: row; }
-  #flagship .content {
-    align-items: start;
-    margin-bottom: 0;
-    padding: 0 4rem;
-    text-align: left; }
-    #flagship .content button {
-      margin-left: 0;
-      margin-right: 0; }
-  #flagship .image img {
-    width: 45vw; }
+      flex: 1; }
+      #benefits ul li i {
+        font-size: 6rem; }
+  #flagship {
+    flex-direction: column; }
+    #flagship .content {
+      align-items: start;
+      margin-bottom: 0;
+      padding: 0 4rem;
+      text-align: left; }
+      #flagship .content button {
+        margin-left: 0;
+        margin-right: 0; }
+    #flagship .image img {
+      width: 45vw; } }
