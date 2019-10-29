@@ -10,7 +10,11 @@ html, body {
   line-height: 1.5;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  width: 100vw; }
+  min-width: 100vw;
+  min-height: 100vh; }
+
+h1 {
+  font-size: 1.5rem; }
 
 h2 {
   font-size: 2.5rem;
@@ -22,16 +26,22 @@ p {
 ul {
   list-style-type: none; }
 
+a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none; }
+
 .btn {
   border-radius: 0.4rem;
   color: #fff;
+  cursor: pointer;
   margin: 1rem;
   opacity: 0.8;
   text-align: center;
+  transition: all 0.5s ease-in-out;
   width: 25vw; }
   .btn:hover {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out; }
+    opacity: 1; }
 
 .btn-cta {
   background-color: #00c853;
@@ -64,19 +74,17 @@ header {
 
 header .nav-brand {
   cursor: pointer;
-  display: flex; }
+  display: flex;
+  transition: all 0.5s ease-in-out; }
   header .nav-brand:hover {
     color: #5588d3;
-    filter: brightness(150%);
-    transition: all 0.5s ease-in-out; }
+    filter: brightness(150%); }
     header .nav-brand:hover > i {
       filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8)); }
     header .nav-brand:hover > h1 {
       filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8)); }
   header .nav-brand i {
     margin: 0.25rem 0.5rem 0; }
-  header .nav-brand h1 {
-    font-size: 1.5rem; }
 
 header i {
   font-size: 1.5rem; }
@@ -85,22 +93,23 @@ header #menu-toggle {
   color: #fff;
   opacity: 0.8;
   position: absolute;
-  top: 2.5vh;
-  right: 8vw; }
+  top: 3.5vh;
+  right: 8vw;
+  transition: all 0.5s ease-in-out; }
   header #menu-toggle:hover {
-    opacity: 1;
-    transition: all 0.5s ease-in-out; }
+    opacity: 1; }
 
 header #nav-mobile-top {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: fixed;
   top: -30rem;
   left: 0;
-  width: 100vw; }
+  transition: all 0.5s ease-in-out;
+  width: 100%; }
   header #nav-mobile-top:target {
-    transform: translateY(30rem);
-    transition: all 0.5s ease-in-out; }
+    transform: translateY(30rem); }
 
 header ul {
   display: flex;
@@ -109,30 +118,24 @@ header ul {
   header ul li {
     position: relative; }
     header ul li:first-of-type {
-      top: 2.5vh;
-      right: -38vw; }
+      top: 3.5vh;
+      left: 38vw; }
     header ul li a {
       display: block;
-      color: #fff;
       font-size: 1rem;
       margin: 0.75rem 0;
       opacity: 0.8;
       padding: 1rem;
-      text-decoration: none;
       width: 100%;
       height: 100%;
+      transition: all 0.5s ease-in-out;
       white-space: nowrap; }
       header ul li a:hover {
-        opacity: 1;
-        transition: all 0.5s ease-in-out; }
+        opacity: 1; }
     header ul li a#nav-close {
       margin: 0;
       padding: 0;
       position: absolute; }
-
-header #nav-close:hover {
-  text-decoration: none;
-  opacity: 0.5; }
 
 main > section {
   padding: 4rem 5vw;
@@ -199,7 +202,7 @@ main > section {
 .help {
   background: #5588d3;
   background-image: linear-gradient(to right, rgba(1, 87, 155, 0.8), rgba(1, 87, 155, 0.8)), url("../images/help.jpg");
-  background-size: initial;
+  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   display: flex;
@@ -213,12 +216,13 @@ main > section {
     .help .content h2, .help .content p, .help .content section {
       margin: 1.5rem 0; }
     .help .content .contact-links {
+      background: transparent;
       display: flex; }
       .help .content .contact-links a {
         color: #fff;
-        display: block;
+        display: flex;
         font-size: 1rem;
-        margin: 0 1rem;
+        margin: 0 1rem 0 0;
         text-decoration: none; }
         .help .content .contact-links a i {
           color: #fff;
@@ -243,6 +247,7 @@ main > section {
       color: #5588d3; }
 
 footer {
+  background: #3575d3;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -252,6 +257,7 @@ footer {
     background: #4a83d8;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
     row-gap: 2rem;
     padding: 6rem 0;
     width: 100%; }
@@ -274,11 +280,11 @@ footer {
       cursor: pointer;
       display: flex;
       margin-left: -0.5rem;
-      margin-top: 0.25rem; }
+      margin-top: 0.25rem;
+      transition: all 0.5s ease-in-out; }
       footer .footer-information .footer-brand:hover {
         color: #5588d3;
-        filter: brightness(150%);
-        transition: all 0.5s ease-in-out; }
+        filter: brightness(150%); }
         footer .footer-information .footer-brand:hover > i {
           filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8)); }
         footer .footer-information .footer-brand:hover > h1 {
@@ -305,13 +311,13 @@ footer {
   header {
     flex-direction: row; }
     header #nav-mobile-top {
+      align-items: flex-end;
       background: none;
       color: #fff;
       top: 0;
       position: relative; }
       header #nav-mobile-top ul {
-        flex-direction: row;
-        justify-content: flex-end; }
+        flex-direction: row; }
         header #nav-mobile-top ul li {
           font-size: 1.25rem;
           margin: 0 1rem; }
@@ -374,7 +380,7 @@ footer {
 .page-container {
   position: relative; }
 
-header, footer {
+header {
   background: #212121;
   box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5); }
 
@@ -383,13 +389,6 @@ header {
   header #nav-mobile-top {
     background: black; }
 
-main section {
-  padding: 4rem 5vw;
-  text-align: center;
-  min-height: 100vh; }
-  main section:nth-child(2n+3) {
-    background: #eee; }
-
 #hero {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/hero-lg.jpg");
   background-size: cover;
@@ -397,7 +396,7 @@ main section {
   min-height: initial;
   height: 400px; }
   #hero .text-container {
-    margin-top: 50px; }
+    margin-top: 0; }
 
 @media (min-width: 768px) {
   header #nav-mobile-top {

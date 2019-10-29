@@ -1,0 +1,16 @@
+// Global variables
+
+$primary-color: #5588d3;
+$secondary-color: #4a83d8;
+$tertiary-color: #3575d3;
+$white: #fff;
+$transition-ease: all 0.5s ease-in-out;
+
+
+// Global mixins
+
+@mixin column($align) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+}

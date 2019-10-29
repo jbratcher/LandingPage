@@ -8,7 +8,7 @@
 
 // Header
 
-header, footer {
+header {
     background: #212121; 
     box-shadow: 2px 0 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -24,19 +24,9 @@ header {
 
 // Main
 
-main {
+// main {
 
-    section {
-        padding: 4rem 5vw;
-        text-align: center;
-        min-height: 100vh;
-
-        &:nth-child(2n+3) {
-        background: #eee;
-        }
-    }
-
-}
+// }
 
 #hero {
     background-image:   linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
@@ -47,7 +37,7 @@ main {
     height: 400px;
 
     .text-container {
-        margin-top: 50px;
+        margin-top: 0;
     }
 
 }
@@ -83,6 +73,3 @@ main {
     }
 
 }
-
-
-

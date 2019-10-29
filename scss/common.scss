@@ -1,3 +1,5 @@
+@import '_variables';
+
 // shared styles
 
 * {
@@ -7,13 +9,18 @@
 }
 
 html, body {
-    background: #fff;
+    background: $white;
     color: #212121;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -29,19 +36,26 @@ ul {
     list-style-type: none;
 }
 
+a {
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 // Classes
 
 .btn {
     border-radius: 0.4rem;
-    color: #fff;
+    color: $white;
+    cursor: pointer;
     margin: 1rem;
     opacity: 0.8;
     text-align: center;
+    transition: all 0.5s ease-in-out;
     width: 25vw;
 
     &:hover {
         opacity: 1;
-        transition: opacity 0.5s ease-in-out;
     }
 
 }
@@ -65,7 +79,7 @@ ul {
 }
 
 .btn-ghost {
-    border: 0.125rem solid #fff;
+    border: 0.125rem solid $white;
     padding: 14px;
 }
 
@@ -78,7 +92,7 @@ ul {
 // Header 
 
 header {
-    color: #fff;
+    color: $white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,11 +105,11 @@ header {
     .nav-brand {
         cursor: pointer;
         display: flex;
+        transition: all 0.5s ease-in-out;
 
         &:hover {
-            color: #5588d3;
+            color: $primary-color;
             filter: brightness(150%);
-            transition: all 0.5s ease-in-out;
 
             &>i {
                 filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
@@ -109,10 +123,6 @@ header {
         i {
             margin: 0.25rem 0.5rem 0;
         }
-
-        h1 {
-            font-size: 1.5rem;
-        }
       
     }
 
@@ -121,62 +131,57 @@ header {
     }
 
     #menu-toggle {
-        color: #fff;
+        color: $white;
         opacity: 0.8;
         position: absolute;
-        top: 2.5vh;
+        top: 3.5vh;
         right: 8vw;
+        transition: all 0.5s ease-in-out;
 
         &:hover {
             opacity: 1;
-            transition: all 0.5s ease-in-out;
         }
 
     }
 
     #nav-mobile-top {
-        display: flex;
-        flex-direction: column;
+        @include column(center);
         position: fixed;
         top: -30rem;
         left: 0;
-        width: 100vw;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
 
         &:target {
             transform: translateY(30rem);
-            transition: all 0.5s ease-in-out;
         }
 
     }
   
     ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include column(center);
 
         li {
             position: relative;
 
             &:first-of-type {
-                top: 2.5vh;
-                right: -38vw;
+                top: 3.5vh;
+                left: 38vw;
             }
 
             a {
                 display: block;
-                color: #fff;
                 font-size: 1rem;
                 margin: 0.75rem 0;
                 opacity: 0.8;
                 padding: 1rem;
-                text-decoration: none;
                 width: 100%;
                 height: 100%;
+                transition: all 0.5s ease-in-out;
                 white-space: nowrap;
 
                 &:hover {
-                    opacity: 1;
-                    transition: all 0.5s ease-in-out;
+                    opacity: 1;       
                 }
 
             }
@@ -191,14 +196,6 @@ header {
 
     }
 
-    #nav-close {
-
-        &:hover {
-            text-decoration: none;
-            opacity: 0.5;
-        }
-
-    }
 }
 
 // Main Content
@@ -220,14 +217,12 @@ main {
 // Hero
 
 #hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include column(center);
 
     .text-container {
 
         h2, p {
-            color: #fff;
+            color: $white;
             text-shadow: 1px 1px 4px #212121;
         }
     
@@ -245,7 +240,7 @@ main {
 // Benefits Section
 
 #benefits {
-    color: #5588d3;
+    color: $primary-color;
 
     h2 {
         margin: 0 0 2rem;
@@ -268,7 +263,7 @@ main {
             }
 
             h3 > a {
-                color: #5588d3;
+                color: $primary-color;
 
                 &:hover {
                     filter: brightness(110%);
@@ -289,20 +284,16 @@ main {
 // Flagship section
 
 #flagship {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include column(center);
     padding-bottom: 0;
     position: relative;
 
     .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include column(center);
         margin-bottom: 4rem;
 
         h2 {
-            color: #5588d3;
+            color: $primary-color;
             margin-bottom: 1rem;
         }
     
@@ -327,19 +318,17 @@ main {
 // Help Section
 
 .help {
-    background: #5588d3;
+    background: $primary-color;
     background-image:   linear-gradient(to right, rgba(1, 87, 155, 0.8), rgba(1, 87, 155, 0.8)),
                         url('../images/help.jpg');
-    background-size: initial;
+    background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: $white;
     display: flex;
     padding: 0 5vw;
 
     .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include column(center);
         justify-content: space-around;
         margin: 4rem 0;
 
@@ -348,17 +337,18 @@ main {
         }
 
         .contact-links {
+            background: transparent;
             display: flex;
 
             a {
-                color: #fff;
-                display: block;
+                color: $white;
+                display: flex;
                 font-size: 1rem;
-                margin: 0 1rem;
+                margin: 0 1rem 0 0;
                 text-decoration: none;
     
                 i {
-                    color: #fff;
+                    color: $white;
                     font-size: 2rem;
                     margin-right: 0.5rem;
                 }
@@ -374,9 +364,7 @@ main {
 // Alternate Product Section
 
 #alternate-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include column(center);
     padding: 0 5vw;
 
     .image {
@@ -397,7 +385,7 @@ main {
         }
 
         h2 {
-            color: #5588d3;
+            color: $primary-color;
         }
 
     }
@@ -407,16 +395,16 @@ main {
 // Footer
 
 footer {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: $tertiary-color;
+    color: $white;
+    @include column(center);
     padding: 0;
 
     .footer-nav-list-group {
-        background: #4a83d8;
+        background: $secondary-color;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-items: center;
         row-gap: 2rem;
         padding: 6rem 0;
         width: 100%;
@@ -434,7 +422,7 @@ footer {
                 }
 
                 a {
-                    color: #fff;
+                    color: $white;
                     text-decoration: none;
                 }
 
@@ -454,11 +442,11 @@ footer {
             display: flex;
             margin-left: -0.5rem;
             margin-top: 0.25rem;
+            transition: all 0.5s ease-in-out;
 
             &:hover {
-                color: #5588d3;
+                color: $primary-color;
                 filter: brightness(150%);
-                transition: all 0.5s ease-in-out;
 
                 &>i {
                     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
@@ -496,7 +484,7 @@ footer {
                 margin: 0 0.5rem;
                 
                 a {
-                    color: #fff;
+                    color: $white;
                     text-decoration: none;
                 }
     
@@ -518,15 +506,14 @@ footer {
         flex-direction: row;
 
         #nav-mobile-top {
-
+            align-items: flex-end;
             background: none;
-            color: #fff;
+            color: $white;
             top: 0;
             position: relative;
 
             ul {
                 flex-direction: row;
-                justify-content: flex-end;
 
                 li {
                     font-size: 1.25rem;
@@ -666,4 +653,3 @@ footer {
     }
 
 }
-

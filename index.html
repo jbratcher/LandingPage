@@ -8,7 +8,6 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Landing Page</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
-        <script defer async src="https://kit.fontawesome.com/42714493db.js" crossorigin="anonymous"></script>
         <!-- <link rel="stylesheet" type="text/css" href="./css/top-nav.css"> -->
         <link rel="stylesheet" type="text/css" href="./css/blended-nav.css">
 
@@ -18,172 +17,174 @@
 
     <section class="page-container">
 
-            <header>
+        <header>
 
-                <section class="nav-brand">
+            <section class="nav-brand">
+                <i class="fas fa-code-branch"></i>
+                <h1>LandingPage</h1>
+            </section>
+
+            <a href="#nav-mobile-top" id="menu-toggle" class="toggle"><i class="fas fa-bars" aria-hidden="true"></i></a>
+
+            <nav id="nav-mobile-top">
+                <ul>
+                    <li><a id="nav-close" class="toggle" href="#"><i class="fas fa-times"></i></a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a class="btn btn-transparent" href="#">Try It Free</a></li>
+                    <li><a class="btn btn-ghost" href="#">Sign In</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <section id="hero">
+                <section class="text-container">
+                    <h2>Hero Section</h2>
+                    <p>Your short slogan about what you can offer.</p>
+                    <button class="btn btn-cta">Get Started</button>
+                </section>
+            </section>
+
+            <section id="benefits">
+                <h2>Helping Clients Achieve Their Goals</h2>
+                <ul>
+                    <li>
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>
+                            <a href="#">Solutions</a>
+                        </h3>
+                        <p>We solve your problems for you</p>
+                    </li>  
+                    <li>
+                        <i class="fas fa-cloud"></i>
+                        <h3>
+                            <a href="#">Cloud Services</a>
+                        </h3>
+                        <p>Harness the power of the cloud</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>
+                            <a href="#">Expert Assistance</a>
+                        </h3>
+                        <p>Our team of experts wil help you every step of the way</p>
+                    </li>
+                </ul>
+                <button class="btn btn-cta">Plans & Pricing</button>
+            </section>
+
+            <section id="flagship">
+                <section class="content">
+                    <h2>Our Flagship Product</h2>
+                    <p>Introducing our new, shiny product that we've been working hard on just for you.</p>
+                    <button class="btn btn-cta">Learn More</button>
+                </section>
+                <section class="image">
+                    <img src="./images/flagship.png" alt="Our Flagship Product">
+                </section>
+            </section>
+
+            <section class="help">
+                <section class="content">
+                    <h2>Get Help & Get Started</h2>
+                    <p>We are global experts in web design, development, and execution.  We will help you in every step of the way as much as you need.  You can count on us.</p>
+                    <section class="contact-links">
+                        <a href="#"><i class="fas fa-comments"></i>Chat</a>
+                        <a href="#"><i class="fas fa-paper-plane"></i>contact@mail.com</a>
+                    </section>
+                </section>
+            </section>
+
+            <section id="alternate-product">
+                <section class="image">
+                    <img src="./images/flagship.png" alt="Our Flagship Product">
+                </section>
+                <section class="content">
+                    <h2>Here is another product we have</h2>
+                    <p>This is a solution to a very specific problem and if you have that problem than you will love this product.  We made it just for you!</p>
+                    <button class="btn btn-cta">Learn More</button>
+                </section>
+            </section>
+
+        </main>
+
+        <footer>
+
+            <section class="footer-nav-list-group">
+
+                <ul class="footer-nav-list">
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Flagship</a></li>
+                    <li><a href="#">Mid-tier</a></li>
+                    <li><a href="#">Basic</a></li>
+                    <li><a href="#">Try it free</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Alternatives</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li><a href="#">Platforms</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">C#</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">SQL</a></li>
+                    <li><a href="#">Dart</a></li>
+                    <li><a href="#">F#</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="#">Philosophy</a></li>
+                    <li><a href="#">Mission</a></li>
+                </ul>
+
+                <ul class="footer-nav-list">
+                    <li><a href="#">Open Source</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Repos</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Gitlab</a></li>
+                </ul>
+
+            </section>
+
+            <section class="footer-information">
+
+                <section class="footer-brand">
                     <i class="fas fa-code-branch"></i>
                     <h1>LandingPage</h1>
                 </section>
-    
-                <a href="#nav-mobile-top" id="menu-toggle" class="toggle"><i class="fas fa-bars" aria-hidden="true"></i></a>
-    
-                <nav id="nav-mobile-top">
-                    <ul>
-                        <li><a id="nav-close" class="toggle" href="#"><i class="fas fa-times"></i></a></li>
-                        <li><a href="#">Solutions</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a class="btn btn-transparent" href="#">Try It Free</a></li>
-                        <li><a class="btn btn-ghost" href="#">Sign In</a></li>
-                    </ul>
-                </nav>
-    
-            </header>
-    
-            <main>
-    
-                <section id="hero">
-                    <section class="text-container">
-                        <h2>Hero Section</h2>
-                        <p>Your short slogan about what you can offer.</p>
-                        <button class="btn btn-cta">Get Started</button>
-                    </section>
-                </section>
-    
-                <section id="benefits">
-                    <h2>Helping Clients Achieve Their Goals</h2>
-                    <ul>
-                        <li>
-                            <i class="fas fa-clipboard-check"></i>
-                            <h3>
-                                <a href="#">Solutions</a>
-                            </h3>
-                            <p>We solve your problems for you</p>
-                        </li>  
-                        <li>
-                            <i class="fas fa-cloud"></i>
-                            <h3>
-                                <a href="#">Cloud Services</a>
-                            </h3>
-                            <p>Harness the power of the cloud</p>
-                        </li>
-                        <li>
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <h3>
-                                <a href="#">Expert Assistance</a>
-                            </h3>
-                            <p>Our team of experts wil help you every step of the way</p>
-                        </li>
-                    </ul>
-                    <button class="btn btn-cta">Plans & Pricing</button>
-                </section>
-    
-                <section id="flagship">
-                    <section class="content">
-                        <h2>Our Flagship Product</h2>
-                        <p>Introducing our new, shiny product that we've been working hard on just for you.</p>
-                        <button class="btn btn-cta">Learn More</button>
-                    </section>
-                    <section class="image">
-                        <img src="./images/flagship.png" alt="Our Flagship Product">
-                    </section>
-                </section>
-    
-                <section class="help">
-                    <section class="content">
-                        <h2>Get Help & Get Started</h2>
-                        <p>We are global experts in web design, development, and execution.  We will help you in every step of the way as much as you need.  You can count on us.</p>
-                        <section class="contact-links">
-                            <a href="#"><i class="fas fa-comments"></i>Chat</a>
-                            <a href="#"><i class="fas fa-paper-plane"></i>contact@mail.com</a>
-                        </section>
-                    </section>
-                </section>
-    
-                <section id="alternate-product">
-                    <section class="image">
-                        <img src="./images/flagship.png" alt="Our Flagship Product">
-                    </section>
-                    <section class="content">
-                        <h2>Here is another product we have</h2>
-                        <p>This is a very specific solution to a problem but if you have that problem than you will love this product.  We made it just for you!</p>
-                        <button class="btn btn-cta">Learn More</button>
-                    </section>
-                </section>
-    
-            </main>
-    
-            <footer>
 
-                <section class="footer-nav-list-group">
+                <p class="copy">&copy;2019 Company Inc., All Rights Reserved</p>
 
-                    <ul class="footer-nav-list">
-                        <li><a href="#">Solutions</a></li>
-                        <li><a href="#">Flagship</a></li>
-                        <li><a href="#">Mid-tier</a></li>
-                        <li><a href="#">Basic</a></li>
-                        <li><a href="#">Try it free</a></li>
-                        <li><a href="#">Developers</a></li>
-                        <li><a href="#">Alternatives</a></li>
-                    </ul>
+                <p class="phone">555-555-5555</p>
 
-                    <ul class="footer-nav-list">
-                        <li><a href="#">Platforms</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">PHP</a></li>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">C#</a></li>
-                        <li><a href="#">Python</a></li>
-                        <li><a href="#">SQL</a></li>
-                        <li><a href="#">Dart</a></li>
-                        <li><a href="#">F#</a></li>
-                    </ul>
+                <ul class="social-icons-list">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instragram"></i></a></li>
+                </ul>
 
-                    <ul class="footer-nav-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Staff</a></li>
-                        <li><a href="#">Philosophy</a></li>
-                        <li><a href="#">Mission</a></li>
-                    </ul>
+            </section>
 
-                    <ul class="footer-nav-list">
-                        <li><a href="#">Open Source</a></li>
-                        <li><a href="#">API</a></li>
-                        <li><a href="#">Repos</a></li>
-                        <li><a href="#">Developers</a></li>
-                        <li><a href="#">Teams</a></li>
-                        <li><a href="#">Github</a></li>
-                        <li><a href="#">Gitlab</a></li>
-                    </ul>
-
-                </section>
-
-                <section class="footer-information">
-
-                    <section class="footer-brand">
-                        <i class="fas fa-code-branch"></i>
-                        <h1>LandingPage</h1>
-                    </section>
-
-                    <p class="copy">&copy;2019 Company Inc., All Rights Reserved</p>
-
-                    <p class="phone">555-555-5555</p>
-
-                    <ul class="social-icons-list">
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instragram"></i></a></li>
-                    </ul>
-
-                </section>
-    
-            </footer>
+        </footer>
 
     </section>
+
+    <script async src="https://kit.fontawesome.com/42714493db.js" crossorigin="anonymous"></script>
 
     </body>
 
